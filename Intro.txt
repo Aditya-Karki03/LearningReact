@@ -1,0 +1,74 @@
+1. React is a library
+2. There are some attachments that come with react which are:
+    a. React-DOM    b. React Native
+3. React and React DOM used for web dev
+4. React and React Native used for mobile apps
+5. There are two three ways to create react project
+6. NPM is Node Package Manger used to install node into systems
+7. NPX is Node Package Executioner used to directly run node without installing node packages into the systems
+8. The first way of creating a react project is usijng react only:
+    a. npx create-react-app 01basicreact
+    b. create-react-app is an utility(simply a software)
+    c. This method takes lots of time to create the project
+    d. It is a very bulky utility and many things that we don't want
+    e. In simple terms its javascript bundle size is very big.
+    f. Hence not very efficient
+9. After creating the project we'll be move inside the folder "01basicreact" and do whatever needed
+10. To enter into the project folder the following command is needed:
+    a. cd 01basicreact
+11. Now to understand any react packages or project we should always go to package.json file
+12. If you move under the packages.json file you will see the follwing:
+    a. name of the project
+    b. version
+    c. dependencies
+        1. some testing library
+        2. react
+        3. react-DOM
+        4. react-scripts
+        5. web-vitals (tracks performance)
+    d. scripts (this runs the project or makes it production ready)
+        1. start (to run project in development environment)
+        2. build 
+        3. testing
+        4. eject (it is used when the work with react is done and we want to move to other frameworks)
+    e. eslintConfig (finds some typos/errors in the code with red line normally founds in MS DOCs)
+    f. browserList
+12. To run the project we've to run the start script as mentioned above in 12 d 1
+13. In the 10 step we changed our directory to 01basicreact
+14. Now we've to look out for package.json file in the directory using the following command
+    a. dir
+15. To run the start script we will run the following code:
+    a. npm run start
+16. The above steps will fireup a port in the browser start displaying the react logo etc.
+17. In the same way if we start the build which is present inside the script as:
+    a. npm run build
+18. It will create a build folder which contains all the converted js & css which was written on react
+19. The build folder is created because the browser does not understand react it only understands html,css and js
+20. This build folder is only served to the users not the src folder
+21. The above way is not a efficent way to create a react app
+22. We will be using vite to create a react app, vite is a bundler
+23  To create vite project the command is:
+    a. npm create vite@latest (create is an utility)
+        1. Enter project name
+        2. Choose the framework
+        3. Select the variant (choose the lang between ts/js)
+24. This are the steps of creating a vite project
+25. The difference between both of the ways of creating the project is
+    a. Node modules is present in non-efficent way of creating a project
+    b. Whereas it is not present in the vite project
+26. In the same way we will again go through the package.json file 
+27. Here we've only two dependencies inside the package.json file 
+    a. react
+    b. react-dom
+28. Here devDependencies are lot more this dependencies are used in development purpose
+29. Now to run the project we need to change the directory using cd "project_Name"
+30. Than we need to look out for package.json file using "dir" command
+31. Since node modules are not available in the vite project we need to install it using:
+    a. npm i
+32.  npm run dev (will start the project) dev is inside the scripts which is inside package.json file
+33  These are the some ways of creating a react project
+
+
+34. After going throug pakcage.json file we should update our README.md file
+35. We will be mostly working inside the src folder
+
