@@ -47,7 +47,7 @@
 20. This build folder is only served to the users not the src folder
 21. The above way is not a efficent way to create a react app
 22. We will be using vite to create a react app, vite is a bundler
-23  To create vite project the command is:
+23  To create vite project the command is:  
     a. npm create vite@latest (create is an utility)
         1. Enter project name
         2. Choose the framework
@@ -72,3 +72,7 @@
 34. After going throug pakcage.json file we should update our README.md file
 35. We will be mostly working inside the src folder
 
+***************************************Flow of React and Structure***************************
+1. React is a library of js which means majority of work is already done by react
+2. Here we will be learning about how react js is injected into HTML and CSS code
+3. React is a core foundational library and react-dom is an implementation of react in web
