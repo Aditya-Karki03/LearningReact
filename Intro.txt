@@ -1,3 +1,5 @@
+****************************Create React Projects*******************
+
 1. React is a library
 2. There are some attachments that come with react which are:
     a. React-DOM    b. React Native
@@ -73,6 +75,31 @@
 35. We will be mostly working inside the src folder
 
 ***************************************Flow of React and Structure***************************
-1. React is a library of js which means majority of work is already done by react
-2. Here we will be learning about how react js is injected into HTML and CSS code
+1. React is a library of js, which means majority of work is already done by react
+2. Here we will be learning about how react is injected into HTML and CSS code
 3. React is a core foundational library and react-dom is an implementation of react in web
+4. To inject javascript into html we need to use the script tag, and there is no other way
+5. For the project made using the create-react-app
+    a. The node modules folder contains all the dependencies which are present in the package.json file are installed
+    b. Src contains App.js and index.js
+    c. gitignore, files that needs to be pushed and ignored
+    d. package-lock.json same as package.json, just the dependencies gets locked and it will only run in this version
+    e. Stable version of package.json is locked into package-lock.json
+6. Now inside the public folder    
+    a. index.html is important
+    b. This is a single page and is very important aka single page application
+    c. It is called SPA bc it contains only 1 html file and every work will be done on that file 
+    d. If you see carefully index.html normally contains script tag, but there is no such tag here
+7. Now after observing all of the above we need to move to src folder
+    a. It contains a file as index.js first we need to look into that
+    b. const root variable is created and initialzed it with the react-dom because
+        1. Normally web also contains its dom but react also has it
+        2. React-dom is aka virtual dom.
+        3. Virtual dom compares with the main dom and the changes that are relevant are only done
+        4. Virtual dom contains a method known as createRoot and we get the root id using js and store it into root variable
+        5. We render something as App tag, there is no such tag in HTML
+        6. Step 5 shows the power of react, there is something called jsx
+        7. jsx used to render html element with the help of javascript
+        8. jsx is similar to html
+        9. The work of App tag is seen in App.js file
+        10.App.js file contains a function called App which returns a h1 tag
