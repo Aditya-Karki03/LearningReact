@@ -82,7 +82,7 @@
 5. For the project made using the create-react-app
     a. The node modules folder contains all the dependencies which are present in the package.json file are installed
     b. Src contains App.js and index.js
-    c. gitignore, files that needs to be pushed and ignored
+    c. gitignore, files that needs to be pushed or ignored
     d. package-lock.json same as package.json, just the dependencies gets locked and it will only run in this version
     e. Stable version of package.json is locked into package-lock.json
 6. Now inside the public folder    
@@ -96,10 +96,25 @@
         1. Normally web also contains its dom but react also has it
         2. React-dom is aka virtual dom.
         3. Virtual dom compares with the main dom and the changes that are relevant are only done
-        4. Virtual dom contains a method known as createRoot and we get the root id using js and store it into root variable
+        4. Virtual dom contains a method known as createRoot(it expects virtual dom to select an HTML element) and we get the root id using js and store it into root variable
         5. We render something as App tag, there is no such tag in HTML
         6. Step 5 shows the power of react, there is something called jsx
         7. jsx used to render html element with the help of javascript
         8. jsx is similar to html
         9. The work of App tag is seen in App.js file
         10.App.js file contains a function called App which returns a h1 tag
+        11.Index.js file is importing the same and rendering the html
+        12.Above 10th and 11th step depict that we are writing html through javascript
+        13.The advantage of this is we've got programming capabilities inside HTML.
+        14. This concept will come to use during big and complex projects
+        15. If you see index.html, observe there is no js index into it, so how index.js file got loaded
+        16. For that we need to look at package.json file 
+        17. If we create a react app using create-react-app we normally get react & react-dom and we also get react-scripts
+        18. react-scripts is responsible for behind the scene injecting the js into the html
+        19. For proof we can inspect & page source the html file in the browser
+8. If we compare the inner workings of vite and the react project we'll see:
+    a. It does not contain script dependencies in the package.json file
+    b. Script tag is added in the HTML file (the main.jsx file is added) of the vite project
+    c. main.jsx and index.js are of no difference:
+        1. main.jsx file has not declared the root variable, they've directly concatenated the .render
+        2. Index.js we've explicitly created the root variable and we've done root.render
