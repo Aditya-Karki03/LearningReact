@@ -117,4 +117,4 @@
     b. Script tag is added in the HTML file (the main.jsx file is added) of the vite project
     c. main.jsx and index.js are of no difference:
         1. main.jsx file has not declared the root variable, they've directly concatenated the .render
-        2. Index.js we've explicitly created the root variable and we've done root.render
+        2. Index.js we've explicitly created the root variable and we've done root.render 
