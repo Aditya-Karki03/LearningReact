@@ -101,7 +101,7 @@
         6. Step 5 shows the power of react, there is something called jsx
         7. jsx used to render html element with the help of javascript
         8. jsx is similar to html
-        9. The work of App tag is seen in App.js file
+        9. The work of App tag is seen in App.js file 
         10.App.js file contains a function called App which returns a h1 tag
         11.Index.js file is importing the same and rendering the html
         12.Above 10th and 11th step depict that we are writing html through javascript
@@ -118,3 +118,13 @@
     c. main.jsx and index.js are of no difference:
         1. main.jsx file has not declared the root variable, they've directly concatenated the .render
         2. Index.js we've explicitly created the root variable and we've done root.render 
+        3. Create react app contains some testing dependencies and some more but vite only contains the necessary things
+9. We've seen app.jsx (aka component in react) file being rendered in main.jsx file in vite
+10. Lets see if app.jsx file can render some functions or not
+11. Firstly we cannot create a js file inside the vite project(because of some strict instructions)
+12. And also the name of the function(component) should start with the uppercase letter
+13. I've created my own component as MyName.jsx
+14. Imported within the App.jsx file and rendered it, go have a look
+
+************************************Custom React**********************************
+1. 

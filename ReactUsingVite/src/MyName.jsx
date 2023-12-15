@@ -1,6 +1,7 @@
+
 function MyName(){
     return(
-        <h1>Hi This is Aditya Karki</h1>
+        <h3>Hello This is Aditya Karki</h3>
     )
 }
 export default MyName;
