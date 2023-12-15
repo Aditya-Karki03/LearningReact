@@ -8,7 +8,7 @@
 5. There are two three ways to create react project
 6. NPM is Node Package Manger used to install node into systems
 7. NPX is Node Package Executioner used to directly run node without installing node packages into the systems
-8. The first way of creating a react project is usijng react only:
+8. The first way of creating a react project is using react only:
     a. npx create-react-app 01basicreact
     b. create-react-app is an utility(simply a software)
     c. This method takes lots of time to create the project
@@ -46,7 +46,7 @@
     a. npm run build
 18. It will create a build folder which contains all the converted js & css which was written on react
 19. The build folder is created because the browser does not understand react it only understands html,css and js
-20. This build folder is only served to the users not the src folder
+20. This build folder is served to the users not the src folder
 21. The above way is not a efficent way to create a react app
 22. We will be using vite to create a react app, vite is a bundler
 23  To create vite project the command is:  
@@ -97,7 +97,7 @@
         2. React-dom is aka virtual dom.
         3. Virtual dom compares with the main dom and the changes that are relevant are only done
         4. Virtual dom contains a method known as createRoot(it expects virtual dom to select an HTML element) and we get the root id using js and store it into root variable
-        5. We render something as App tag, there is no such tag in HTML
+        5. We render something as App tag, there is no such tag in HTML aka component
         6. Step 5 shows the power of react, there is something called jsx
         7. jsx used to render html element with the help of javascript
         8. jsx is similar to html
@@ -127,4 +127,43 @@
 14. Imported within the App.jsx file and rendered it, go have a look
 
 ************************************Custom React**********************************
-1. 
+1. JSX stands for javascript xml, it is basically javascript+HTML 
+    a. Example of JSX is:- const element = <h1>Hello, JSX!</h1>;
+2. We've created a new folder CustomReact which contains index.html and customReact.js
+3. Since React is a js library that is why we did the step2
+4. In index.html file we created a div with id root and attached our script tag
+5. We selected the root id with the help of dom selectors
+6. We created an object reactElement which is a demonstration of how a html tag with various attributes are stored
+7. Than we wrote a render function as renderer which does the following things:
+    a. Creates an element and stores it within a variable ElementInsideRootId
+    b. We created a forin loop to iterate through object created on step 6
+    c. With the help of steb 7 b we attach attributes to it 
+    d. After that we attach the inner HTML which is mentioned in the object created on step 6
+    e. Than we append child inside the div element with root id 
+    f. Than we call the renderer function
+8. Than we went inside the vite project => Main.jsx file
+9. We created a function as MyOwnApp and tried to render it as MyOwnApp() and it was successfull but not a good practice
+10. And since we got to know that every jsx is parsed into an object within react that is why we tried to pass our own created object directly an object
+11. The above step was unsuccessful because reacts expects a function and we gave it a custom object
+12. Object can also be passed but there is some syntax, keys and values are different
+13. But if we pass a jsx as:
+    a. const newElement=(<a href="https://google.com" target="_blank">Welcome To google</a>);
+    b. If newElement is passed inside the render than it works
+14. To know the syntax in which the jsx element are parsed we did:
+    a. Const reactElement=React.createElement(
+        'a',
+        {href: 'https://google.com', target: '_blank}, //this can be empty
+        'click me to visit google',
+        anotherElment //This is an evaluated expression (an expression which is already evaluated and sent inside the HTML using {anotherElment})
+
+        )
+    b. CreateElement automatically injects the js which is done by babble.
+    c. Example of evaluated expression is:
+        1. function app(){
+                const myVar='Aditya';
+                return (
+                    <div>
+                        <h1>Hi My name is {myVar}</h1> //myVar is an evaluated expression
+                    </div>
+                )
+            }
