@@ -167,3 +167,27 @@
                     </div>
                 )
             }
+***************************************React Components****************************
+1. React Applications are made up of React Components
+2. Components can be as big as whole HTML page or as small as a button
+3. Components are nothing but an JS function which return a HTML/markup
+4. Rules for creating Components
+    a. name of the function must start with uppercase
+    b. HTML tags must be lowercase
+5. We can also nest one component onto another
+    a. Eg:- function MyButton(){ //this is a component
+                return(
+                    <h1>This is my Button</h1>
+                )
+            }
+            function BigComponent(){
+                return(
+                    <>
+                        <MyButton/>
+                        <h1>This is where MyButton is nested</h1>
+                    </>
+                )
+            }
+    b. The syntax written inside the return keyword is JSX syntax
+6. 
+****************************************Hooks and Projects***************************
