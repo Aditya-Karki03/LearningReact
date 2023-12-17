@@ -190,6 +190,6 @@
             }
     b. The syntax written inside the return keyword is JSX syntax
     c. JSX is optional but used for convenience
-    d. JSX is stricter than HTML
+    d. JSX is stricter than HTMLs
 6. 
 ****************************************Hooks and Projects***************************
