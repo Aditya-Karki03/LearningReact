@@ -190,6 +190,32 @@
             }
     b. The syntax written inside the return keyword is JSX syntax
     c. JSX is optional but used for convenience
-    d. JSX is stricter than HTMLs
+    d. JSX is stricter than HTML
 6. 
+
+****************************************State**************************************
+1. State is a component specfic memory
+2. It is needed because:
+    a. Components needs to change lot of things on the screen based on the interaction
+    b. Components needs to remember as an eg: current image, current input value etc. and what will happen something is clicked.
+3. Need of state:
+    a. Whenever a component re-renders everything starts from the scratch like every programming language if a C++ prog is re-run:
+        1. Lets say our variable is initially initialzed with 0.
+        2. Every time a button is clicked the variable is incremented.
+        3. If that same component is re-rendered the variable will again start with 0
+    b. Whenever a variable is updated(incremented or whatever), internally its value changes but in UI it does not show any change
+4. To update a component with new data, two things needs to happen  
+    a. Retain the values while between renders
+    b. Trigger react to render the component with new data (re-rendering)
+5. The work mentioned in the 4th step is done by useState hook
+    a. A state variable to retain data b/w renders
+    b. A state setter function to update the variable and trigger react to re-render the component again
+    
 ****************************************Hooks and Projects***************************
+1. Functions starting with "use" are called Hooks.
+2. useState is a built-in Hook provided by React.
+3. There are multiple hooks in React
+4. We can also create our own hooks by combining the existing once
+5. Hooks are more restrictive than other functions
+6. We can call hooks on top of our components or other Hooks
+7. If useState is used in a condition or a loop, it is recommended to extract the component and put it there
