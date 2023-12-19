@@ -1,19 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState } from 'react';
+
 import './App.css'
+import WithoutUsingHook from './Practice'
 
 function App() {
-  
-  let count=0;
+ const[count,countUpdate]=useState(0);
+  // let count=0;
   const counter=()=>{
-    count=count+1;
+    countUpdate(count+1)
     console.log(count);
   }
  
   return (
     <>
-      <button onClick={counter}>{count}</button>
+      <WithoutUsingHook/>
+      <br />
+      <button onClick={counter}>Using Hook {count}</button>
     </>
   )
 }

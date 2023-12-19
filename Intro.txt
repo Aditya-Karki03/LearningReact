@@ -212,10 +212,40 @@
     b. A state setter function to update the variable and trigger react to re-render the component again
     
 ****************************************Hooks and Projects***************************
+
+Hooks are basically some features/functions of React that is used in development to remember something
+or do something, just like useState is a hook that is attached to react to remember the current state 
+nd to update the current state
+
 1. Functions starting with "use" are called Hooks.
-2. useState is a built-in Hook provided by React.
-3. There are multiple hooks in React
-4. We can also create our own hooks by combining the existing once
+2. useState is a built-in Hook provided by React. There are multiple hooks in React
+3. Hooks are special function that are only available while React is rendering. React lets us hook into different React features
+4. State is just one of those features
 5. Hooks are more restrictive than other functions
-6. We can call hooks on top of our components or other Hooks
-7. If useState is used in a condition or a loop, it is recommended to extract the component and put it there
+6. We can call hooks on top of our components for reference see the State project/folder or on other Hooks
+7. We can also create our own hooks by combining the existing once
+8. If useState is used in a condition or a loop, it is recommended to extract the component and put it there
+
+9. When we use 'useState' we are telling react that I want this component to remember something.
+10.With reference to State Project/folder we are using usestate to remember the count.
+11.Count is the state variable
+12.We can have as my state variable as we want in a component and of any datatype
+
+
+************************************************Working Of Usestate hook************
+1.useState is an array containing two values:
+    a. First is the state variable which can hold any kind of value
+    b. Second is the state setter function which sets the value
+2. We've destructered the array to use it as a hook
+    a. Initially it would look as:
+        1. const useState=['set','setter_function'];
+    b. After destructuring it would look like as:
+        1. const[index, indexSetter]=useState{0};
+    c. The value inside the useState which is 0 is the value of index
+3. Working of useState hook:
+    a. In the first render according to 2.b.1 index value is set to 0, so initially the value of index is set to 0
+    b. Now the state is updated, than the button is clicked and indexSetter is called and index value is incremented by 1 and tells react to remember it
+    c. The above step triggers another render.
+    d. After that react sees that useState{0}, but then it remembers that index is set to 1 than again the same step is followed that a button is clicked and so on
+    c. After that indexSetter function is called and index is incremented but
+        1. index sees that useState is set to 0, but React remembers that state is set to 1
