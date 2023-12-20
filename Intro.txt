@@ -249,3 +249,13 @@ nd to update the current state
     d. After that react sees that useState{0}, but then it remembers that index is set to 1 than again the same step is followed that a button is clicked and so on
     c. After that indexSetter function is called and index is incremented but
         1. index sees that useState is set to 0, but React remembers that state is set to 1
+
+
+**********************Virtual DOM, Fibre, Reconciliation************************
+1. Virtual DOM is a programming concept where an ideal representation of UI is kept in memory
+2. Reconciliation is a process when the virtual DOM is synced with Real DOM by a library such as ReactDOM
+3. Need of Virtual DOM and Reconciliation:
+    a. Whenever something we build something in react, it makes a exact Virtual DOM out of it
+    b. And then reconciles it
+    c. The above two steps makes sure that there is no attribute manipulation, event handling and manual DOM updation which we normally used to do while using the javascript
+    
