@@ -258,4 +258,7 @@ nd to update the current state
     a. Whenever something we build something in react, it makes a exact Virtual DOM out of it
     b. And then reconciles it
     c. The above two steps makes sure that there is no attribute manipulation, event handling and manual DOM updation which we normally used to do while using the javascript
-    
+4. Virtual DOM is more of a pattern than a specfic tech.
+5. In React, Virtual DOM is usually associated with React Elements, since they are the objects representing the user interface
+6. React howver also uses internal objects called fibres to hold additional info about the component tree.
+7. Fibre can also be considered a part of "Virtual DOM" implementation in React
