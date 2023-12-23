@@ -215,7 +215,7 @@
 
 Hooks are basically some features/functions of React that is used in development to remember something
 or do something, just like useState is a hook that is attached to react to remember the current state 
-nd to update the current state
+and to update the current state
 
 1. Functions starting with "use" are called Hooks.
 2. useState is a built-in Hook provided by React. There are multiple hooks in React
