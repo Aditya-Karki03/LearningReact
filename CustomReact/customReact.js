@@ -23,7 +23,7 @@ function renderer(root, reactElement){
     //And every time a tree of element is made just like above reactElement
     //At the end we inject it in the HTML
     const ElementInsideRootId=document.createElement(reactElement.type);
-    for (const work in customDOM.works) {
+    for (const work in reactElement.works) {
         if(work==='child')   continue;//before the developers used to write child property within the works object, but in our case it is not there
        ElementInsideRootId.setAttribute(work,reactElement.works[work]);
     }                       
