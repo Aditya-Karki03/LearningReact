@@ -1,0 +1,9 @@
+.background-container{
+  height: 97vh;
+  /* border: 5px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:end;
+  margin-bottom: 60px;
+}
