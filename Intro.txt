@@ -1,264 +1,46 @@
-****************************Create React Projects*******************
-
-1. React is a library
-2. There are some attachments that come with react which are:
-    a. React-DOM    b. React Native
-3. React and React DOM used for web dev
-4. React and React Native used for mobile apps
-5. There are two three ways to create react project
-6. NPM is Node Package Manger used to install node into systems
-7. NPX is Node Package Executioner used to directly run node without installing node packages into the systems
-8. The first way of creating a react project is using react only:
-    a. npx create-react-app 01basicreact
-    b. create-react-app is an utility(simply a software)
-    c. This method takes lots of time to create the project
-    d. It is a very bulky utility and many things that we don't want
-    e. In simple terms its javascript bundle size is very big.
-    f. Hence not very efficient
-9. After creating the project we'll be move inside the folder "01basicreact" and do whatever needed
-10. To enter into the project folder the following command is needed:
-    a. cd 01basicreact
-11. Now to understand any react packages or project we should always go to package.json file
-12. If you move under the packages.json file you will see the follwing:
-    a. name of the project
-    b. version
-    c. dependencies
-        1. some testing library
-        2. react
-        3. react-DOM
-        4. react-scripts
-        5. web-vitals (tracks performance)
-    d. scripts (this runs the project or makes it production ready)
-        1. start (to run project in development environment)
-        2. build 
-        3. testing
-        4. eject (it is used when the work with react is done and we want to move to other frameworks)
-    e. eslintConfig (finds some typos/errors in the code with red line normally founds in MS DOCs)
-    f. browserList
-12. To run the project we've to run the start script as mentioned above in 12 d 1
-13. In the 10 step we changed our directory to 01basicreact
-14. Now we've to look out for package.json file in the directory using the following command
-    a. dir
-15. To run the start script we will run the following code:
-    a. npm run start
-16. The above steps will fireup a port in the browser start displaying the react logo etc.
-17. In the same way if we start the build which is present inside the script as:
-    a. npm run build
-18. It will create a build folder which contains all the converted js & css which was written on react
-19. The build folder is created because the browser does not understand react it only understands html,css and js
-20. This build folder is served to the users not the src folder
-21. The above way is not a efficent way to create a react app
-22. We will be using vite to create a react app, vite is a bundler
-23  To create vite project the command is:  
-    a. npm create vite@latest (create is an utility)
-        1. Enter project name
-        2. Choose the framework
-        3. Select the variant (choose the lang between ts/js)
-24. This are the steps of creating a vite project
-25. The difference between both of the ways of creating the project is
-    a. Node modules is present in non-efficent way of creating a project
-    b. Whereas it is not present in the vite project
-26. In the same way we will again go through the package.json file 
-27. Here we've only two dependencies inside the package.json file 
-    a. react
-    b. react-dom
-28. Here devDependencies are lot more this dependencies are used in development purpose
-29. Now to run the project we need to change the directory using cd "project_Name"
-30. Than we need to look out for package.json file using "dir" command
-31. Since node modules are not available in the vite project we need to install it using:
-    a. npm i
-32.  npm run dev (will start the project) dev is inside the scripts which is inside package.json file
-33  These are the some ways of creating a react project
+gill sans
+background-color: #f7f7f7;
 
 
-34. After going throug pakcage.json file we should update our README.md file
-35. We will be mostly working inside the src folder
-
-***************************************Flow of React and Structure***************************
-1. React is a library of js, which means majority of work is already done by react
-2. Here we will be learning about how react is injected into HTML and CSS code
-3. React is a core foundational library and react-dom is an implementation of react in web
-4. To inject javascript into html we need to use the script tag, and there is no other way
-5. For the project made using the create-react-app
-    a. The node modules folder contains all the dependencies which are present in the package.json file are installed
-    b. Src contains App.js and index.js
-    c. gitignore, files that needs to be pushed or ignored
-    d. package-lock.json same as package.json, just the dependencies gets locked and it will only run in this version
-    e. Stable version of package.json is locked into package-lock.json
-6. Now inside the public folder    
-    a. index.html is important
-    b. This is a single page and is very important aka single page application
-    c. It is called SPA bc it contains only 1 html file and every work will be done on that file 
-    d. If you see carefully index.html normally contains script tag, but there is no such tag here
-7. Now after observing all of the above we need to move to src folder
-    a. It contains a file as index.js first we need to look into that
-    b. const root variable is created and initialzed it with the react-dom because
-        1. Normally web also contains its dom but react also has it
-        2. React-dom is aka virtual dom.
-        3. Virtual dom compares with the main dom and the changes that are relevant are only done
-        4. Virtual dom contains a method known as createRoot(it expects virtual dom to select an HTML element) and we get the root id using js and store it into root variable
-        5. We render something as App tag, there is no such tag in HTML aka component
-        6. Step 5 shows the power of react, there is something called jsx
-        7. jsx used to render html element with the help of javascript
-        8. jsx is similar to html
-        9. The work of App tag is seen in App.js file 
-        10.App.js file contains a function called App which returns a h1 tag
-        11.Index.js file is importing the same and rendering the html
-        12.Above 10th and 11th step depict that we are writing html through javascript
-        13.The advantage of this is we've got programming capabilities inside HTML.
-        14. This concept will come to use during big and complex projects
-        15. If you see index.html, observe there is no js index into it, so how index.js file got loaded
-        16. For that we need to look at package.json file 
-        17. If we create a react app using create-react-app we normally get react & react-dom and we also get react-scripts
-        18. react-scripts is responsible for behind the scene injecting the js into the html
-        19. For proof we can inspect & page source the html file in the browser
-8. If we compare the inner workings of vite and the react project we'll see:
-    a. It does not contain script dependencies in the package.json file
-    b. Script tag is added in the HTML file (the main.jsx file is added) of the vite project
-    c. main.jsx and index.js are of no difference:
-        1. main.jsx file has not declared the root variable, they've directly concatenated the .render
-        2. Index.js we've explicitly created the root variable and we've done root.render 
-        3. Create react app contains some testing dependencies and some more but vite only contains the necessary things
-9. We've seen app.jsx (aka component in react) file being rendered in main.jsx file in vite
-10. Lets see if app.jsx file can render some functions or not
-11. Firstly we cannot create a js file inside the vite project(because of some strict instructions)
-12. And also the name of the function(component) should start with the uppercase letter
-13. I've created my own component as MyName.jsx
-14. Imported within the App.jsx file and rendered it, go have a look
-
-************************************Custom React**********************************
-1. JSX stands for javascript xml, it is basically javascript+HTML 
-    a. Example of JSX is:- const element = <h1>Hello, JSX!</h1>;
-2. We've created a new folder CustomReact which contains index.html and customReact.js
-3. Since React is a js library that is why we did the step2
-4. In index.html file we created a div with id root and attached our script tag
-5. We selected the root id with the help of dom selectors
-6. We created an object reactElement which is a demonstration of how a html tag with various attributes are stored
-7. Than we wrote a render function as renderer which does the following things:
-    a. Creates an element and stores it within a variable ElementInsideRootId
-    b. We created a forin loop to iterate through object created on step 6
-    c. With the help of steb 7 b we attach attributes to it 
-    d. After that we attach the inner HTML which is mentioned in the object created on step 6
-    e. Than we append child inside the div element with root id 
-    f. Than we call the renderer function
-8. Than we went inside the vite project => Main.jsx file
-9. We created a function as MyOwnApp and tried to render it as MyOwnApp() and it was successfull but not a good practice
-10. And since we got to know that every jsx is parsed into an object within react that is why we tried to pass our own created object directly an object
-11. The above step was unsuccessful because reacts expects a function and we gave it a custom object
-12. Object can also be passed but there is some syntax, keys and values are different
-13. But if we pass a jsx as:
-    a. const newElement=(<a href="https://google.com" target="_blank">Welcome To google</a>);
-    b. If newElement is passed inside the render than it works
-14. To know the syntax in which the jsx element are parsed we did:
-    a. Const reactElement=React.createElement(
-        'a',
-        {href: 'https://google.com', target: '_blank}, //this can be empty
-        'click me to visit google',
-        anotherElment //This is an evaluated expression (an expression which is already evaluated and sent inside the HTML using {anotherElment})
-
-        )
-    b. CreateElement automatically injects the js which is done by babble.
-    c. Example of evaluated expression is:
-        1. function app(){
-                const myVar='Aditya';
-                return (
-                    <div>
-                        <h1>Hi My name is {myVar}</h1> //myVar is an evaluated expression
-                    </div>
-                )
-            }
-***************************************React Components****************************
-1. React Applications are made up of React Components
-2. Components can be as big as whole HTML page or as small as a button
-3. Components are nothing but an JS function which return a HTML/markup
-4. Rules for creating Components
-    a. name of the function must start with uppercase
-    b. HTML tags must be lowercase
-5. We can also nest one component onto another
-    a. Eg:- function MyButton(){ //this is a component
-                return(
-                    <h1>This is my Button</h1>
-                )
-            }
-            function BigComponent(){
-                return(
-                    <>
-                        <MyButton/>
-                        <h1>This is where MyButton is nested</h1>
-                    </>
-                )
-            }
-    b. The syntax written inside the return keyword is JSX syntax
-    c. JSX is optional but used for convenience
-    d. JSX is stricter than HTML
-6. 
-
-****************************************State**************************************
-1. State is a component specfic memory
-2. It is needed because:
-    a. Components needs to change lot of things on the screen based on the interaction
-    b. Components needs to remember as an eg: current image, current input value etc. and what will happen something is clicked.
-3. Need of state:
-    a. Whenever a component re-renders everything starts from the scratch like every programming language if a C++ prog is re-run:
-        1. Lets say our variable is initially initialzed with 0.
-        2. Every time a button is clicked the variable is incremented.
-        3. If that same component is re-rendered the variable will again start with 0
-    b. Whenever a variable is updated(incremented or whatever), internally its value changes but in UI it does not show any change
-4. To update a component with new data, two things needs to happen  
-    a. Retain the values while between renders
-    b. Trigger react to render the component with new data (re-rendering)
-5. The work mentioned in the 4th step is done by useState hook
-    a. A state variable to retain data b/w renders
-    b. A state setter function to update the variable and trigger react to re-render the component again
+.img-container img{
+    border: 1px solid black;
+    width: 250px;
+    height: 250px;
+}
+.input{
+    display:flex;
+  
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.input form input[type='text']{
+    height: 30px;
+    width: 250px;
+    margin-right: 20px;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-weight: lighter;
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 10px  #cbc1c1 ;
+}
+.input form input[type='submit']{
+    height: 35px;
+    width: 80px;
+    background-color: rgb(82, 148, 82);
+    color: #fff;
+    /* outline: none; */
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
     
-****************************************Hooks and Projects***************************
-
-Hooks are basically some features/functions of React that is used in development to remember something
-or do something, just like useState is a hook that is attached to react to remember the current state 
-and to update the current state
-
-1. Functions starting with "use" are called Hooks.
-2. useState is a built-in Hook provided by React. There are multiple hooks in React
-3. Hooks are special function that are only available while React is rendering. React lets us hook into different React features
-4. State is just one of those features
-5. Hooks are more restrictive than other functions
-6. We can call hooks on top of our components for reference see the State project/folder or on other Hooks
-7. We can also create our own hooks by combining the existing once
-8. If useState is used in a condition or a loop, it is recommended to extract the component and put it there
-
-9. When we use 'useState' we are telling react that I want this component to remember something.
-10.With reference to State Project/folder we are using usestate to remember the count.
-11.Count is the state variable
-12.We can have as my state variable as we want in a component and of any datatype
-
-
-************************************************Working Of Usestate hook************
-1.useState is an array containing two values:
-    a. First is the state variable which can hold any kind of value
-    b. Second is the state setter function which sets the value
-2. We've destructered the array to use it as a hook
-    a. Initially it would look as:
-        1. const useState=['set','setter_function'];
-    b. After destructuring it would look like as:
-        1. const[index, indexSetter]=useState{0};
-    c. The value inside the useState which is 0 is the value of index
-3. Working of useState hook:
-    a. In the first render according to 2.b.1 index value is set to 0, so initially the value of index is set to 0
-    b. Now the state is updated, than the button is clicked and indexSetter is called and index value is incremented by 1 and tells react to remember it
-    c. The above step triggers another render.
-    d. After that react sees that useState{0}, but then it remembers that index is set to 1 than again the same step is followed that a button is clicked and so on
-    c. After that indexSetter function is called and index is incremented but
-        1. index sees that useState is set to 0, but React remembers that state is set to 1
-
-
-**********************Virtual DOM, Fibre, Reconciliation************************
-1. Virtual DOM is a programming concept where an ideal representation of UI is kept in memory
-2. Reconciliation is a process when the virtual DOM is synced with Real DOM by a library such as ReactDOM
-3. Need of Virtual DOM and Reconciliation:
-    a. Whenever something we build something in react, it makes a exact Virtual DOM out of it
-    b. And then reconciles it 
-    c. The above two steps makes sure that there is no attribute manipulation, event handling and manual DOM updation which we normally used to do while using the javascript
-4. Virtual DOM is more of a pattern than a specfic tech.
-5. In React, Virtual DOM is usually associated with React Elements, since they are the objects representing the user interface
-6. React howver also uses internal objects called fibres to hold additional info about the component tree.
-7. Fibre can also be considered a part of "Virtual DOM" implementation in React
+}
+.input form input[type='submit']:hover{
+    cursor: pointer;
+    background-color: green;
+    transition: 0.2s;
+}
+.input form input{
+    font-size: 15px;
+}
