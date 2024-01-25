@@ -1,46 +1,62 @@
-gill sans
-background-color: #f7f7f7;
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utility.css" />
+  </head>
+  <body>
+    <div class="container flex bg-black">
+      <div class="left border">
+        <div class="home bg-gray">
+          <div class="logo">
+            <img class="invert" src="spotify.svg" alt="Spotify logo" />
+          </div>
+          <ul>
+            <li><img class="invert" src="home.svg" alt="Home logo" />Home</li>
+            <li>
+              <img class="invert" src="search.svg" alt="Search logo" />Search
+            </li>
+          </ul>
+        </div>
+        <div class="library bg-gray"></div>
+      </div>
+      <div class="right border"></div>
+    </div>
+  </body>
+</html>
 
 
-.img-container img{
-    border: 1px solid black;
-    width: 250px;
-    height: 250px;
+
+
+*{
+    margin: 0;
+    padding: 0;
 }
-.input{
-    display:flex;
-  
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-.input form input[type='text']{
-    height: 30px;
-    width: 250px;
-    margin-right: 20px;
-    border-radius: 5px;
-    padding-left: 10px;
-    font-weight: lighter;
-    border: none;
-    outline: none;
-    box-shadow: 2px 2px 10px  #cbc1c1 ;
-}
-.input form input[type='submit']{
-    height: 35px;
-    width: 80px;
-    background-color: rgb(82, 148, 82);
-    color: #fff;
-    /* outline: none; */
-    border: none;
-    border-radius: 5px;
-    letter-spacing: 0.5px;
+
+body{
+    /* background-color: #000;
+    color: #fff; */
     
 }
-.input form input[type='submit']:hover{
-    cursor: pointer;
-    background-color: green;
-    transition: 0.2s;
+.container{
+ /* width: 100%; */
+ gap: 3px;
+ /* border: 5px solid #000; */
 }
-.input form input{
-    font-size: 15px;
+.left{
+    width: 20vw;
+    padding: 15px;
 }
+.right{
+    width: 80vw;
+}
+.home ul li{
+    list-style-type: none;
+    width: 24px;
+    display: flex;
+    gap: 8px;
+}
+

@@ -1,0 +1,15 @@
+.from-container{
+    height: 70px;
+    margin: 20px;
+    display: grid;
+}
+
+.labels{
+    border: 1px solid #fff;
+    
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 10px;
+}

@@ -1,0 +1,22 @@
+
+*{
+    margin: 0;
+}
+.main-container{
+    height: 100vh;
+    border: 1px solid #000;
+    
+}
+.form-container{
+    height: 50vh;
+    width: 50vw;
+    border: 1px solid orange;
+    background-color: lightgray;
+    /* filter: blur(8px); */
+  /* -webkit-filter: blur(8px); */
+    /* background-color: rgba(#fff, #fff, #fff, 0.5); */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
