@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.App{
+    height: 50vh;
+    width: 50vw;
+    border: 1px solid #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: lightgray;
+    border-radius: 8px;
+    text-align: center;
+}
+.button{
+    width: 60px;
+    height: 30px;
+    letter-spacing: 1px;
+    background-color: orange;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
