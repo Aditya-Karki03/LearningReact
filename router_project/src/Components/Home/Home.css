@@ -1,0 +1,43 @@
+.home-container{
+    display: grid;
+    /* width: 100vw; */
+}
+.image1-container{
+    width: inherit;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 0;
+    padding: 0 40px;
+}
+
+.header{
+    margin-bottom: -20px;
+}
+.bold{
+    font-size: 30px;
+}
+.beautiful{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    /* border: 1px solid black; */
+    height: 40px;
+    width: 200px;
+    gap: 5px;
+    background-color: rgb(223, 102, 4);
+    color: #fff;
+    border-radius: 5px;
+}
+.image2-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.text{
+    /* border: 1px solid #000; */
+    width: 250px;
+}

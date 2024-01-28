@@ -1,0 +1,16 @@
+.about-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+}
+.image-container, .image-container>img{
+    height: 300px;
+    width: 300px;
+    /* border: 1px solid black; */
+}
+.texts{
+    height: 300px;
+    width: 600px;
+    /* border: 1px solid red; */
+}
