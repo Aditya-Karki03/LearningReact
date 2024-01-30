@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../Styles/Item.modules.css'
 
 function TodoItem({
     todoItem,
@@ -9,9 +9,11 @@ function TodoItem({
     console.log(todoItem)
     return(
 <>
-        <input type="checkbox" checked={todoItem.completion} onChange={()=>TodoCompletionStatus(todoItem.id)} />
-        <p>{todoItem.msg}</p>
-        <button onClick={()=>deleteTodoItem(todoItem.id)}>Delete</button>
+        <div className="main-container">
+            <input className='check' type="checkbox" checked={todoItem.completion} onChange={()=>TodoCompletionStatus(todoItem.id)} />
+            <p>{todoItem.msg}</p>
+            <button onClick={()=>deleteTodoItem(todoItem.id)}>Delete</button>
+        </div>
     </>
     )
 }

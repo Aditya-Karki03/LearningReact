@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoItem from './TodoItem';
+import '../Styles/Todo.modules.css'
 import { useState } from 'react';
 
 function Todo() {
@@ -23,21 +24,33 @@ function Todo() {
     }
 
     const deleteTodo=(id)=>{
-
+        setTodos(todos.filter((todo)=>(
+            todo.id!==id
+        )))
     }
 
     const completionStatus=(id)=>{
-
+        setTodos(todos.map(todo => {
+            if (todo.id === id) {
+            return {...todo, completion: !todo.completed};
+            } else {
+            return todo;
+            } 
+            }));
     }
 
   return (
     <>
-        <input type="text" placeholder='Add Todo' onChange={(e)=>setText(e.target.value)} />
-        <button className="btn" onClick={()=>AddTask(text)}>Add</button>
-        {/* <TodoItem msg={text} completionStatus={completion} AllTodos={todo} /> */}
-        {todos.map((todo)=>(
-            <TodoItem todoItem={todo} deleteTodoItem={deleteTodo} TodoCompletionStatus={completionStatus} />
-        ))}
+        <div className="todo-container">
+            <div className="input-btn">
+                <input type="text" placeholder='Add Todo' onChange={(e)=>setText(e.target.value)} />
+                <button className="btn" onClick={()=>AddTask(text)}>Add</button>
+            </div>
+            
+            {todos.map((todo)=>(
+                <TodoItem todoItem={todo} deleteTodoItem={deleteTodo} TodoCompletionStatus={completionStatus} />
+            ))}
+        </div>
     </>
   )
 }
